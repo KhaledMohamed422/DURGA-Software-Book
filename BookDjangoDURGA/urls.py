@@ -19,7 +19,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('SessionManagementUsingCookies/', include('SessionManagementUsingCookies.urls')),
-    path('SessionManagementBysingSessionAPI/', include('SessionManagementBysingSessionAPI.urls')),
-
+    path('SessionManagementUsingCookies/',
+         include('SessionManagementUsingCookies.urls')),
+    path('SessionManagementBysingSessionAPI/',
+         include('SessionManagementBysingSessionAPI.urls')),
+    path('ClassBasedView/', include('ClassBasedView.urls')),
 ]
