@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'SessionManagementBysingSessionAPI',
     'ClassBasedView',
     'AdvancedModeConcepts',
-
+    'DjangoMiddleware',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +54,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'DjangoMiddleware.middleware.ExecutionFlowMiddleware', 
+    'DjangoMiddleware.middleware.AppMaintenanceMiddleware',
+    'DjangoMiddleware.middleware.ErrorMessageMiddleware', 
+ 
 
 ]
 

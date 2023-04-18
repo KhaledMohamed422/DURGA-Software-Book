@@ -25,5 +25,6 @@ urlpatterns = [
          include('SessionManagementBysingSessionAPI.urls')),
     path('ClassBasedView/', include('ClassBasedView.urls')),
     path('AdvancedModeConcepts/', include('AdvancedModeConcepts.urls')),
-
+    path('DjangoMiddleware/', include('DjangoMiddleware.urls')),
+    
 ]
