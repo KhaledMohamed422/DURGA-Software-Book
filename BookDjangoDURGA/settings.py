@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'SessionManagementUsingCookies',
     'SessionManagementBysingSessionAPI',
     'ClassBasedView',
+    'AdvancedModeConcepts',
 
 ]
 

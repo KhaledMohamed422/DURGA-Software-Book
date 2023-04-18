@@ -24,4 +24,6 @@ urlpatterns = [
     path('SessionManagementBysingSessionAPI/',
          include('SessionManagementBysingSessionAPI.urls')),
     path('ClassBasedView/', include('ClassBasedView.urls')),
+    path('AdvancedModeConcepts/', include('AdvancedModeConcepts.urls')),
+
 ]
