@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     'ClassBasedView',
     'AdvancedModeConcepts',
     'DjangoMiddleware',
+    'RealTimeProjectBlogApplicationDevelopment',
+    
+    # The 3d party apps 
+    'taggit',
 ]
 
 MIDDLEWARE = [
@@ -54,10 +58,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'DjangoMiddleware.middleware.ExecutionFlowMiddleware', 
-    'DjangoMiddleware.middleware.AppMaintenanceMiddleware',
-    'DjangoMiddleware.middleware.ErrorMessageMiddleware', 
- 
+    # 'DjangoMiddleware.middleware.ExecutionFlowMiddleware',
+    # 'DjangoMiddleware.middleware.AppMaintenanceMiddleware',
+    # 'DjangoMiddleware.middleware.ErrorMessageMiddleware',
+
 
 ]
 
@@ -128,8 +132,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'fathykhaled517@gmail.com'
+EMAIL_HOST_PASSWORD = 'gndcdbtzwltriclf'

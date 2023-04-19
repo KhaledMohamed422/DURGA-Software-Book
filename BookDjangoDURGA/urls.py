@@ -16,6 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
+from django.http import HttpResponse, HttpResponseForbidden
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +30,8 @@ urlpatterns = [
     path('ClassBasedView/', include('ClassBasedView.urls')),
     path('AdvancedModeConcepts/', include('AdvancedModeConcepts.urls')),
     path('DjangoMiddleware/', include('DjangoMiddleware.urls')),
+    path('BlogApplication/', include('RealTimeProjectBlogApplicationDevelopment.urls')),
+    
     
 ]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
